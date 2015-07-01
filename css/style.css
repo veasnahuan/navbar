@@ -1,0 +1,34 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+#navLink {
+  overflow: hidden;
+}
+
+ul {
+  width: 100%;
+}
+ul li {
+  width: 100%;
+  text-align: center;
+}
+
+.hide {
+  height: 0;
+  -webkit-transition: height 1s, -webkit-transform 1s;
+  transtion: height 1s;
+}
+
+.show {
+  height: 100px;
+  -webkit-transition: height 1s, -webkit-transform 1s;
+  transtion: height 1s;
+}
+
+@media (min-width: 768px) {
+  #navBut {
+    display: none;
+  }
+}
