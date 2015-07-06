@@ -2,11 +2,7 @@ var nav = document.getElementById('navLink'),
 	btn = document.getElementById('navBut');
 
 (function(){
-	var width = window.innerWidth;
-if( width >= 768){
-	nav.classList.add('show');
-}else
-	nav.classList.add('hide');
+	classSwitch();
 }('docReady', window));
 
 btn.addEventListener('click', function(){
@@ -14,7 +10,9 @@ btn.addEventListener('click', function(){
 	nav.classList.toggle('show');
 });
 
-window.addEventListener('resize', function(){
+window.addEventListener('resize', classSwitch);
+
+function classSwitch(){
 	var width = window.innerWidth;
 	if(width <= 768){
 		nav.classList.add('hide');
@@ -23,5 +21,4 @@ window.addEventListener('resize', function(){
 		nav.classList.remove('hide');
 		nav.classList.add('show');
 	}
-
-});
+}
